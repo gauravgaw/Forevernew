@@ -244,3 +244,46 @@
 // const sentence = `${days[day]}, ${date.getDate()} ${months[month]} ${date.getFullYear()}`;
 
 // document.body.innerHTML = sentence;
+
+//dom
+
+//get element by id
+// const h1 = document.getElementById('title');
+// h1.style.color = 'red';
+
+
+//get ElementByTagName
+// const headings = document.getElementsByTagName('h2');
+// headings[0].style.color = 'red';
+
+
+
+// var t="Globalscopetext";  //Globalscopetext
+// function g(){ 
+
+//     var t="LocalScopeText";
+// console.log(t);   //LocalScopeText
+// }
+// g();              //LocalScopeText
+
+// console.log(t); //Globalscopetext
+
+// function gg(){ 
+//     //let t="LocalScopeText";
+//     console.log(t);   //LocalScopeText
+//     }
+//     gg();
+
+
+//let var const 
+// var name ="x";
+// name = "y";
+// console.log(name);   //y
+
+// let name ="x";
+// name = "y";
+// console.log(name);       //y
+
+// const name ="x";
+// name = "y";
+// console.log(name);         //err assgnmnt to  const
