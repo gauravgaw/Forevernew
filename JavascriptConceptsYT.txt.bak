@@ -287,3 +287,96 @@
 // const name ="x";
 // name = "y";
 // console.log(name);         //err assgnmnt to  const
+
+
+/ function s(l){    // var is function scope //
+//     if(l){       //const,let is block scope  //if
+//    // var a="abc";
+//     let a="abc";
+//     const b="bcd";
+//     console.log(a,b);           //block
+//     }
+//     //console.log(a);           //function
+// }
+// s(true);
+
+
+
+// var country="india";
+//  //let country="india";
+// //const country="india";
+
+// if(true){
+//     var country="us";            //var var    us us
+//     // let country="us";        //let let     us india
+//     // const country="us";      //const const us india
+//     console.log(country);
+// }
+// console.log(country);
+
+
+
+// //function Hoisting 
+// function sum(a,b){
+//     add = a+b;
+//     console.log(add);
+// }
+// sum(5,5); 
+
+
+// //es6 
+// console.log(`Template litrals`);
+
+// let firstName = "jon";
+// let lastName = "doh";
+// console.log(`My name is ${firstName} lastName is ${lastName}.`);
+
+
+//Ecma script 6 es6 String .Methods
+// let firstName = "jon";
+// console.log(`${firstName}`.startsWith('j'));
+// console.log(`${firstName}`.endsWith('v'));
+// console.log(`${firstName}`.includes('on'));
+
+// console.log(`${firstName} `.repeat(5));
+
+
+//desructuring 
+
+// const my=['js','php','c','pythan','java'];
+
+// let [top1,top2,top3,top4,top5]=my;
+// console.log('my fav programing language is '+top1);
+// console.log(my.length);
+
+// // let [top1,,,,toplast]=my;
+// // console.log(`fav lang is ${top1} less fav is ${toplast}`);
+
+
+//swap two no without third variable
+
+////with third
+// let a=5;
+// let b=10;
+// let temp=a;
+// a=b;
+// b=temp;
+// console.log(`${a} ${b}`);
+ 
+// //without third using array desrutching
+// let a=5;
+// let b=10;
+// [a,b]=[b,a];
+// console.log(`${a} ${b}`);
+
+// //object destructuring
+// const bio = {
+//     name : "Ram",
+//     age  : 20 ,
+//     deg : "CS",
+//     hob : { first :"coding",
+//             sec:"vfx"
+// }
+// }
+// let {name:myname, age , deg,hob}=bio;
+// console.log(`My name is ${myname} and Age is ${age} nd hobby is ${hob.sec}`);

@@ -380,3 +380,142 @@
 // }
 // let {name:myname, age , deg,hob}=bio;
 // console.log(`My name is ${myname} and Age is ${age} nd hobby is ${hob.sec}`);
+
+//fat arrow
+// //es5
+// var sum = function(){
+//     var a=5;
+//     var b=5;
+//     return a+b;
+//     }
+//     console.log(sum());
+
+    //es6 arrow function
+    // const sum = () =>{
+    //     let a=5;
+    //     let b=5;
+    //     return a+b;
+    // }
+    // console.log(sum());
+
+    //for single line value we can avoid return and curly bace
+
+// const sum = (a,b)=> a+b
+// console.log(sum(20,30));
+
+
+
+//rest parameter allows us to represent indefinite number of
+// argument as an array 
+
+// function sum(...inputs){       //parameters
+//    console.log(inputs);
+//    let tot =0;
+//    for(let i of inputs ){    //for of loop
+//       tot +=i;
+//    } 
+//    console.log(tot);
+// }
+// sum(1,2,3,4)                //argumnets     
+
+
+// function s(...c){
+//     console.log(` ${c}`);
+// }
+// s('a','s','d','f','g',12)
+
+
+//spread  get value form array
+// //also replace concate
+
+// function sum (a,b,c){
+//     console.log(a+b+c);
+// }
+// var arrVal = [5,5,3];
+// //console.log(...arrVal);
+// sum(...arrVal);
+
+// //concate
+// let arr1 = [1,2,3];
+// let arr2 = [2,3,1];
+
+//  arr1 = [...arr1,...arr2];
+// console.log(arr1) 
+
+
+//exponentiol operator(a**b)
+
+
+// //Class Object  //inheritance
+// class Students{
+//     constructor(name,age,deg){
+//         this.myname = name;
+//         this.myage = age;
+//         this.mydeg = deg;
+
+
+//     }
+//     bio(){
+//         console.log(`hi  im class method ${this.myname} age is ${this.myage} nd Salary is ${this.mysalary}`);
+//     }
+// }
+// class Emp extends Students{
+//     constructor(name,age,deg,salary){
+//         super(name,age,deg);
+//     this.mysalary=salary;
+//     }
+//     bio(){
+//         console.log(`hi  im class method ${this.myname} age is ${this.myage}  nd Salary is ${this.mysalary}`);
+//     }
+// }
+// //  
+// let obj1 = new Emp('ram',25,'cs',100);
+// let obj2=new Emp('rita',24,'bcs',200);
+// // obj1.bio();
+// // obj2.bio();
+
+
+
+
+//Synchronus 
+ //Synchronus request block the client until 
+ //ONE operation completes 
+
+//  const fun2 =()=>{
+    
+//     setTimeout(()=>{
+//            console.log('fun 2 with timer starting');
+//              },2000);
+//     //console.log('fun 2 starting');
+// }
+
+// const fun1 = ()=>{
+//     console.log("fun1 starting");
+//     fun2();
+//     console.log("fun1 is ending");
+// }
+// fun1();
+ 
+
+
+ //Asynchronus (AJAX Web-App Model)
+ //(browser is RESPONSIVE)
+ //asynch request doesn't block client
+//thus JS engine of browser not blocked
+ //user can perform another operation also
+ //same goes for Dom Manipulation,AJAX CALL,-
+ //client-side storage,Aidio video Api etc
+
+//  const fun2 =()=>{
+//     setTimeout(()=>{
+//        console.log('fun 2 with timer starting');
+//     },3000);
+//    // console.log('fun 2 starting');
+// }
+
+// const fun1 = ()=>{
+//     console.log("fun1 starting");
+//     fun2();
+//     console.log("fun1 is ending");
+// }
+// fun1();
