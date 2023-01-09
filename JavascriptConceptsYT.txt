@@ -519,3 +519,111 @@
 //     console.log("fun1 is ending");
 // }
 // fun1();
+
+
+//callback hell 
+// const getRollNo = ()=>{
+//     setTimeout ( ()=>{
+//         console.log('api gets roll no');
+//         let rolln= [1,2,3,4,5];
+//         console.log(rolln);
+
+//         setTimeout( (rolln)=>{
+//             const biodata={
+//                 name: 'motu',
+//                 age: '13'
+//             }
+//             console.log(`name is ${biodata.name} age is ${biodata.age}`);
+//         },2000,rolln[1]);
+
+//     },2000);
+// }
+// getRollNo();
+
+
+//promises to avoid callback hell 
+//three states pending resolve reject
+
+// const pobj1= new Promise ((resolve,reject)=>{
+
+//     setTimeout( ()=>{
+//         let roll_no=[1,2,3,4,5];
+//         resolve(roll_no);
+//         //resolve(roll_no);
+//         reject('error while communicating');
+//     },2000)
+// });
+
+// const getBiodata = (indexdata)=>{
+//     return new Promise ((resolve,reject)=>{
+//                 setTimeout( (indexdata)=>{
+//             const biodata={
+//                 name: 'motu',
+//                 age: '13'
+//             }
+//             resolve(` my roll no is ${indexdata}.name is ${biodata.name} age is ${biodata.age}`);
+//         },2000,indexdata);
+//     })
+// }
+// // promise consum/recive value
+// pobj1.then( (rollno)=>{
+// console.log(rollno);
+// return getBiodata(rollno[1]);
+// }).then((kuchbhi)=>{
+//     console.log(kuchbhi);
+// }).catch( (error)=> {
+// console.log(error);
+// }) 
+
+
+//async await to make promises simple useful
+// asynch is added to funct to tell them to return promise 
+//-rather than value
+
+//awiat makes js wait untill that promise settles and -
+//-returns its results
+// const pobj1= new Promise ((resolve,reject)=>{
+
+//     setTimeout( ()=>{
+//         let roll_no=[1,2,3,4,5];
+//         resolve(roll_no);
+//         //resolve(roll_no);
+//         reject('error while communicating');
+//     },2000)
+// });
+// const getBiodata = (indexdata)=>{
+//     return new Promise ((resolve,reject)=>{
+//                 setTimeout( (indexdata)=>{
+//             const biodata={
+//                 name: 'motu',
+//                 age: '13'
+//             }
+//             resolve(` my roll no is ${indexdata}.name is ${biodata.name} age is ${biodata.age}`);
+//         },2000,indexdata);
+//     });
+// }
+// async function getData(){
+//         const rollnodata = await pobj1;
+//         console.log(rollnodata);
+
+//         const biodatas=await getBiodata(rollnodata[1]);
+//         console.log(biodatas);
+//     }
+//     getData();
+
+
+//Try Catch
+
+//Ajax (asyncronus js and xml)
+//featch method() 
+
+
+// fetch('https://api.covid19api.com/summary').then((apidata)=>{
+//     //console.log(apidata);
+//     return apidata.json();
+// }).then((actualdata)=>{-
+// console.log(actualdata);
+// })
+// .catch((error)=>{-
+// console.log(error);
+// });
